@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '16.0'
+
+target 'NewModo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for NewModo
+  pod 'NMapsMap'
+  pod 'Alamofire'
+
+  # temporary fix for this issue to suppress a ton of warnings
+  # https://github.com/CocoaPods/CocoaPods/issues/7314
+  post_install do |pi|
+      pi.pods_project.targets.each do |t|
+          t.build_configurations.each do |config|
+              config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '16.0'
+          end
+      end
+  end
+
+end
