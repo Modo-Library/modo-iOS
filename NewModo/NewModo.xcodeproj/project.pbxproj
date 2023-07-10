@@ -1,0 +1,795 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		784647ADF514DB059E12A6BB /* Pods_NewModo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A80AAE7C29D4824A1A23FF6 /* Pods_NewModo.framework */; };
+		FA45F6372A5BECDF00B8BBC8 /* NewModoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6362A5BECDF00B8BBC8 /* NewModoApp.swift */; };
+		FA45F63E2A5BECDF00B8BBC8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA45F63D2A5BECDF00B8BBC8 /* Preview Assets.xcassets */; };
+		FA45F6942A5BED0F00B8BBC8 /* PreviewDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6462A5BED0E00B8BBC8 /* PreviewDevice.swift */; };
+		FA45F6952A5BED0F00B8BBC8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6482A5BED0E00B8BBC8 /* Constants.swift */; };
+		FA45F6962A5BED0F00B8BBC8 /* BtnModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F64A2A5BED0E00B8BBC8 /* BtnModifier.swift */; };
+		FA45F6972A5BED0F00B8BBC8 /* Ex+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F64C2A5BED0E00B8BBC8 /* Ex+Font.swift */; };
+		FA45F6982A5BED0F00B8BBC8 /* Ex+UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F64D2A5BED0E00B8BBC8 /* Ex+UIDevice.swift */; };
+		FA45F6992A5BED0F00B8BBC8 /* Ex+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F64E2A5BED0E00B8BBC8 /* Ex+Date.swift */; };
+		FA45F69A2A5BED0F00B8BBC8 /* Ex+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F64F2A5BED0E00B8BBC8 /* Ex+View.swift */; };
+		FA45F69C2A5BED0F00B8BBC8 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6522A5BED0E00B8BBC8 /* Secret.swift */; };
+		FA45F69E2A5BED0F00B8BBC8 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA45F6562A5BED0E00B8BBC8 /* Pretendard-Regular.otf */; };
+		FA45F69F2A5BED0F00B8BBC8 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA45F6572A5BED0E00B8BBC8 /* Pretendard-Black.otf */; };
+		FA45F6A02A5BED0F00B8BBC8 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA45F6582A5BED0E00B8BBC8 /* Pretendard-Medium.otf */; };
+		FA45F6A12A5BED0F00B8BBC8 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA45F6592A5BED0E00B8BBC8 /* Pretendard-Light.otf */; };
+		FA45F6A22A5BED0F00B8BBC8 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA45F65A2A5BED0E00B8BBC8 /* Pretendard-ExtraBold.otf */; };
+		FA45F6A32A5BED0F00B8BBC8 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA45F65B2A5BED0E00B8BBC8 /* Pretendard-Bold.otf */; };
+		FA45F6A42A5BED0F00B8BBC8 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA45F65C2A5BED0E00B8BBC8 /* Pretendard-Thin.otf */; };
+		FA45F6A52A5BED0F00B8BBC8 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA45F65D2A5BED0E00B8BBC8 /* Pretendard-ExtraLight.otf */; };
+		FA45F6A62A5BED0F00B8BBC8 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA45F65E2A5BED0E00B8BBC8 /* Pretendard-SemiBold.otf */; };
+		FA45F6A72A5BED0F00B8BBC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA45F65F2A5BED0E00B8BBC8 /* Assets.xcassets */; };
+		FA45F6AA2A5BED0F00B8BBC8 /* ReverseGeocodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6642A5BED0F00B8BBC8 /* ReverseGeocodeViewModel.swift */; };
+		FA45F6AB2A5BED0F00B8BBC8 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6652A5BED0F00B8BBC8 /* SignUpViewModel.swift */; };
+		FA45F6AC2A5BED0F00B8BBC8 /* NaverBookSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6662A5BED0F00B8BBC8 /* NaverBookSearchViewModel.swift */; };
+		FA45F6AD2A5BED0F00B8BBC8 /* ReverseGeocodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6672A5BED0F00B8BBC8 /* ReverseGeocodeRouter.swift */; };
+		FA45F6AE2A5BED0F00B8BBC8 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6682A5BED0F00B8BBC8 /* BookViewModel.swift */; };
+		FA45F6AF2A5BED0F00B8BBC8 /* ReverseGeocodeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6692A5BED0F00B8BBC8 /* ReverseGeocodeDTO.swift */; };
+		FA45F6B02A5BED0F00B8BBC8 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F66A2A5BED0F00B8BBC8 /* MessageViewModel.swift */; };
+		FA45F6B12A5BED0F00B8BBC8 /* ChatRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F66B2A5BED0F00B8BBC8 /* ChatRoomViewModel.swift */; };
+		FA45F6B22A5BED0F00B8BBC8 /* NaverBookSearchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F66C2A5BED0F00B8BBC8 /* NaverBookSearchDTO.swift */; };
+		FA45F6B32A5BED0F00B8BBC8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F66D2A5BED0F00B8BBC8 /* LocationManager.swift */; };
+		FA45F6B42A5BED0F00B8BBC8 /* NaverBookSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F66E2A5BED0F00B8BBC8 /* NaverBookSearchRouter.swift */; };
+		FA45F6B52A5BED0F00B8BBC8 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6702A5BED0F00B8BBC8 /* Chat.swift */; };
+		FA45F6B62A5BED0F00B8BBC8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6712A5BED0F00B8BBC8 /* Message.swift */; };
+		FA45F6B72A5BED0F00B8BBC8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6722A5BED0F00B8BBC8 /* User.swift */; };
+		FA45F6B82A5BED0F00B8BBC8 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6732A5BED0F00B8BBC8 /* Book.swift */; };
+		FA45F6B92A5BED0F00B8BBC8 /* AddBookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6762A5BED0F00B8BBC8 /* AddBookDetailView.swift */; };
+		FA45F6BA2A5BED0F00B8BBC8 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6772A5BED0F00B8BBC8 /* AddBookView.swift */; };
+		FA45F6BB2A5BED0F00B8BBC8 /* BookSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6782A5BED0F00B8BBC8 /* BookSearchView.swift */; };
+		FA45F6BC2A5BED0F00B8BBC8 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6792A5BED0F00B8BBC8 /* BookDetailView.swift */; };
+		FA45F6BD2A5BED0F00B8BBC8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F67A2A5BED0F00B8BBC8 /* HomeView.swift */; };
+		FA45F6BE2A5BED0F00B8BBC8 /* HomeNaverMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F67B2A5BED0F00B8BBC8 /* HomeNaverMap.swift */; };
+		FA45F6BF2A5BED0F00B8BBC8 /* LikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F67D2A5BED0F00B8BBC8 /* LikeView.swift */; };
+		FA45F6C02A5BED0F00B8BBC8 /* SendTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F67F2A5BED0F00B8BBC8 /* SendTextField.swift */; };
+		FA45F6C12A5BED0F00B8BBC8 /* ChatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6802A5BED0F00B8BBC8 /* ChatDetailView.swift */; };
+		FA45F6C22A5BED0F00B8BBC8 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6812A5BED0F00B8BBC8 /* ChatView.swift */; };
+		FA45F6C32A5BED0F00B8BBC8 /* SignUpDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6832A5BED0F00B8BBC8 /* SignUpDetailView.swift */; };
+		FA45F6C42A5BED0F00B8BBC8 /* MapAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6842A5BED0F00B8BBC8 /* MapAuthView.swift */; };
+		FA45F6C52A5BED0F00B8BBC8 /* SignUpCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6852A5BED0F00B8BBC8 /* SignUpCompleteView.swift */; };
+		FA45F6C62A5BED0F00B8BBC8 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6862A5BED0F00B8BBC8 /* AuthView.swift */; };
+		FA45F6C72A5BED0F00B8BBC8 /* NaverMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6872A5BED0F00B8BBC8 /* NaverMap.swift */; };
+		FA45F6C82A5BED0F00B8BBC8 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6882A5BED0F00B8BBC8 /* SignInView.swift */; };
+		FA45F6C92A5BED0F00B8BBC8 /* PhoneAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6892A5BED0F00B8BBC8 /* PhoneAuthView.swift */; };
+		FA45F6CA2A5BED0F00B8BBC8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F68A2A5BED0F00B8BBC8 /* SignUpView.swift */; };
+		FA45F6CB2A5BED0F00B8BBC8 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F68C2A5BED0F00B8BBC8 /* StatusView.swift */; };
+		FA45F6CC2A5BED0F00B8BBC8 /* WriteReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F68D2A5BED0F00B8BBC8 /* WriteReviewView.swift */; };
+		FA45F6CD2A5BED0F00B8BBC8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F68F2A5BED0F00B8BBC8 /* ProfileView.swift */; };
+		FA45F6CE2A5BED0F00B8BBC8 /* ReverseGeocodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6912A5BED0F00B8BBC8 /* ReverseGeocodeService.swift */; };
+		FA45F6CF2A5BED0F00B8BBC8 /* NaverBookSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6922A5BED0F00B8BBC8 /* NaverBookSearchService.swift */; };
+		FA45F6D02A5BED0F00B8BBC8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6932A5BED0F00B8BBC8 /* ContentView.swift */; };
+		FA45F6D42A5BF37200B8BBC8 /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FA45F6512A5BED0E00B8BBC8 /* Secret.xcconfig */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5A80AAE7C29D4824A1A23FF6 /* Pods_NewModo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewModo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		841957BE0ABB88CDE9BF19A9 /* Pods-NewModo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewModo.debug.xcconfig"; path = "Target Support Files/Pods-NewModo/Pods-NewModo.debug.xcconfig"; sourceTree = "<group>"; };
+		C79D0CE902512FDF2828184D /* Pods-NewModo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewModo.release.xcconfig"; path = "Target Support Files/Pods-NewModo/Pods-NewModo.release.xcconfig"; sourceTree = "<group>"; };
+		FA45F6332A5BECDF00B8BBC8 /* NewModo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewModo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA45F6362A5BECDF00B8BBC8 /* NewModoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewModoApp.swift; sourceTree = "<group>"; };
+		FA45F63D2A5BECDF00B8BBC8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA45F6462A5BED0E00B8BBC8 /* PreviewDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewDevice.swift; sourceTree = "<group>"; };
+		FA45F6482A5BED0E00B8BBC8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA45F64A2A5BED0E00B8BBC8 /* BtnModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtnModifier.swift; sourceTree = "<group>"; };
+		FA45F64C2A5BED0E00B8BBC8 /* Ex+Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ex+Font.swift"; sourceTree = "<group>"; };
+		FA45F64D2A5BED0E00B8BBC8 /* Ex+UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ex+UIDevice.swift"; sourceTree = "<group>"; };
+		FA45F64E2A5BED0E00B8BBC8 /* Ex+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ex+Date.swift"; sourceTree = "<group>"; };
+		FA45F64F2A5BED0E00B8BBC8 /* Ex+View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ex+View.swift"; sourceTree = "<group>"; };
+		FA45F6512A5BED0E00B8BBC8 /* Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Secret.xcconfig; sourceTree = "<group>"; };
+		FA45F6522A5BED0E00B8BBC8 /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		FA45F6562A5BED0E00B8BBC8 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		FA45F6572A5BED0E00B8BBC8 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		FA45F6582A5BED0E00B8BBC8 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		FA45F6592A5BED0E00B8BBC8 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		FA45F65A2A5BED0E00B8BBC8 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		FA45F65B2A5BED0E00B8BBC8 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		FA45F65C2A5BED0E00B8BBC8 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		FA45F65D2A5BED0E00B8BBC8 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		FA45F65E2A5BED0E00B8BBC8 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		FA45F65F2A5BED0E00B8BBC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA45F6642A5BED0F00B8BBC8 /* ReverseGeocodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeocodeViewModel.swift; sourceTree = "<group>"; };
+		FA45F6652A5BED0F00B8BBC8 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		FA45F6662A5BED0F00B8BBC8 /* NaverBookSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaverBookSearchViewModel.swift; sourceTree = "<group>"; };
+		FA45F6672A5BED0F00B8BBC8 /* ReverseGeocodeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeocodeRouter.swift; sourceTree = "<group>"; };
+		FA45F6682A5BED0F00B8BBC8 /* BookViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		FA45F6692A5BED0F00B8BBC8 /* ReverseGeocodeDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeocodeDTO.swift; sourceTree = "<group>"; };
+		FA45F66A2A5BED0F00B8BBC8 /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		FA45F66B2A5BED0F00B8BBC8 /* ChatRoomViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewModel.swift; sourceTree = "<group>"; };
+		FA45F66C2A5BED0F00B8BBC8 /* NaverBookSearchDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaverBookSearchDTO.swift; sourceTree = "<group>"; };
+		FA45F66D2A5BED0F00B8BBC8 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FA45F66E2A5BED0F00B8BBC8 /* NaverBookSearchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaverBookSearchRouter.swift; sourceTree = "<group>"; };
+		FA45F6702A5BED0F00B8BBC8 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		FA45F6712A5BED0F00B8BBC8 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		FA45F6722A5BED0F00B8BBC8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FA45F6732A5BED0F00B8BBC8 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		FA45F6762A5BED0F00B8BBC8 /* AddBookDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookDetailView.swift; sourceTree = "<group>"; };
+		FA45F6772A5BED0F00B8BBC8 /* AddBookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		FA45F6782A5BED0F00B8BBC8 /* BookSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearchView.swift; sourceTree = "<group>"; };
+		FA45F6792A5BED0F00B8BBC8 /* BookDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
+		FA45F67A2A5BED0F00B8BBC8 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FA45F67B2A5BED0F00B8BBC8 /* HomeNaverMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNaverMap.swift; sourceTree = "<group>"; };
+		FA45F67D2A5BED0F00B8BBC8 /* LikeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeView.swift; sourceTree = "<group>"; };
+		FA45F67F2A5BED0F00B8BBC8 /* SendTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendTextField.swift; sourceTree = "<group>"; };
+		FA45F6802A5BED0F00B8BBC8 /* ChatDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDetailView.swift; sourceTree = "<group>"; };
+		FA45F6812A5BED0F00B8BBC8 /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		FA45F6832A5BED0F00B8BBC8 /* SignUpDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpDetailView.swift; sourceTree = "<group>"; };
+		FA45F6842A5BED0F00B8BBC8 /* MapAuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAuthView.swift; sourceTree = "<group>"; };
+		FA45F6852A5BED0F00B8BBC8 /* SignUpCompleteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCompleteView.swift; sourceTree = "<group>"; };
+		FA45F6862A5BED0F00B8BBC8 /* AuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		FA45F6872A5BED0F00B8BBC8 /* NaverMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaverMap.swift; sourceTree = "<group>"; };
+		FA45F6882A5BED0F00B8BBC8 /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		FA45F6892A5BED0F00B8BBC8 /* PhoneAuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneAuthView.swift; sourceTree = "<group>"; };
+		FA45F68A2A5BED0F00B8BBC8 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		FA45F68C2A5BED0F00B8BBC8 /* StatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		FA45F68D2A5BED0F00B8BBC8 /* WriteReviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteReviewView.swift; sourceTree = "<group>"; };
+		FA45F68F2A5BED0F00B8BBC8 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FA45F6912A5BED0F00B8BBC8 /* ReverseGeocodeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeocodeService.swift; sourceTree = "<group>"; };
+		FA45F6922A5BED0F00B8BBC8 /* NaverBookSearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaverBookSearchService.swift; sourceTree = "<group>"; };
+		FA45F6932A5BED0F00B8BBC8 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FA45F6D62A5BF4FC00B8BBC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA45F6302A5BECDF00B8BBC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				784647ADF514DB059E12A6BB /* Pods_NewModo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C27EB3066AC0C58CF9F0382 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				841957BE0ABB88CDE9BF19A9 /* Pods-NewModo.debug.xcconfig */,
+				C79D0CE902512FDF2828184D /* Pods-NewModo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		80B3A7D5A4478CAAE99E1E50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A80AAE7C29D4824A1A23FF6 /* Pods_NewModo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA45F62A2A5BECDF00B8BBC8 = {
+			isa = PBXGroup;
+			children = (
+				FA45F6352A5BECDF00B8BBC8 /* NewModo */,
+				FA45F6342A5BECDF00B8BBC8 /* Products */,
+				0C27EB3066AC0C58CF9F0382 /* Pods */,
+				80B3A7D5A4478CAAE99E1E50 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA45F6342A5BECDF00B8BBC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F6332A5BECDF00B8BBC8 /* NewModo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA45F6352A5BECDF00B8BBC8 /* NewModo */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F6D62A5BF4FC00B8BBC8 /* Info.plist */,
+				FA45F6362A5BECDF00B8BBC8 /* NewModoApp.swift */,
+				FA45F65F2A5BED0E00B8BBC8 /* Assets.xcassets */,
+				FA45F6442A5BED0E00B8BBC8 /* Configuration */,
+				FA45F6932A5BED0F00B8BBC8 /* ContentView.swift */,
+				FA45F6622A5BED0F00B8BBC8 /* Source */,
+				FA45F63C2A5BECDF00B8BBC8 /* Preview Content */,
+			);
+			path = NewModo;
+			sourceTree = "<group>";
+		};
+		FA45F63C2A5BECDF00B8BBC8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F63D2A5BECDF00B8BBC8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA45F6442A5BED0E00B8BBC8 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F6452A5BED0E00B8BBC8 /* PreviewDevice */,
+				FA45F6472A5BED0E00B8BBC8 /* Constants */,
+				FA45F6492A5BED0E00B8BBC8 /* Modifires */,
+				FA45F64B2A5BED0E00B8BBC8 /* Extensions */,
+				FA45F6502A5BED0E00B8BBC8 /* Secret */,
+				FA45F6542A5BED0E00B8BBC8 /* Fonts */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		FA45F6452A5BED0E00B8BBC8 /* PreviewDevice */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F6462A5BED0E00B8BBC8 /* PreviewDevice.swift */,
+			);
+			path = PreviewDevice;
+			sourceTree = "<group>";
+		};
+		FA45F6472A5BED0E00B8BBC8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F6482A5BED0E00B8BBC8 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		FA45F6492A5BED0E00B8BBC8 /* Modifires */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F64A2A5BED0E00B8BBC8 /* BtnModifier.swift */,
+			);
+			path = Modifires;
+			sourceTree = "<group>";
+		};
+		FA45F64B2A5BED0E00B8BBC8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F64C2A5BED0E00B8BBC8 /* Ex+Font.swift */,
+				FA45F64D2A5BED0E00B8BBC8 /* Ex+UIDevice.swift */,
+				FA45F64E2A5BED0E00B8BBC8 /* Ex+Date.swift */,
+				FA45F64F2A5BED0E00B8BBC8 /* Ex+View.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA45F6502A5BED0E00B8BBC8 /* Secret */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F6512A5BED0E00B8BBC8 /* Secret.xcconfig */,
+				FA45F6522A5BED0E00B8BBC8 /* Secret.swift */,
+			);
+			path = Secret;
+			sourceTree = "<group>";
+		};
+		FA45F6542A5BED0E00B8BBC8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F6552A5BED0E00B8BBC8 /* Pretendard */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FA45F6552A5BED0E00B8BBC8 /* Pretendard */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F6562A5BED0E00B8BBC8 /* Pretendard-Regular.otf */,
+				FA45F6572A5BED0E00B8BBC8 /* Pretendard-Black.otf */,
+				FA45F6582A5BED0E00B8BBC8 /* Pretendard-Medium.otf */,
+				FA45F6592A5BED0E00B8BBC8 /* Pretendard-Light.otf */,
+				FA45F65A2A5BED0E00B8BBC8 /* Pretendard-ExtraBold.otf */,
+				FA45F65B2A5BED0E00B8BBC8 /* Pretendard-Bold.otf */,
+				FA45F65C2A5BED0E00B8BBC8 /* Pretendard-Thin.otf */,
+				FA45F65D2A5BED0E00B8BBC8 /* Pretendard-ExtraLight.otf */,
+				FA45F65E2A5BED0E00B8BBC8 /* Pretendard-SemiBold.otf */,
+			);
+			path = Pretendard;
+			sourceTree = "<group>";
+		};
+		FA45F6622A5BED0F00B8BBC8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F6632A5BED0F00B8BBC8 /* VIewModel */,
+				FA45F66F2A5BED0F00B8BBC8 /* Model */,
+				FA45F6742A5BED0F00B8BBC8 /* View */,
+				FA45F6902A5BED0F00B8BBC8 /* Service */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		FA45F6632A5BED0F00B8BBC8 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F6642A5BED0F00B8BBC8 /* ReverseGeocodeViewModel.swift */,
+				FA45F6652A5BED0F00B8BBC8 /* SignUpViewModel.swift */,
+				FA45F6662A5BED0F00B8BBC8 /* NaverBookSearchViewModel.swift */,
+				FA45F6672A5BED0F00B8BBC8 /* ReverseGeocodeRouter.swift */,
+				FA45F6682A5BED0F00B8BBC8 /* BookViewModel.swift */,
+				FA45F6692A5BED0F00B8BBC8 /* ReverseGeocodeDTO.swift */,
+				FA45F66A2A5BED0F00B8BBC8 /* MessageViewModel.swift */,
+				FA45F66B2A5BED0F00B8BBC8 /* ChatRoomViewModel.swift */,
+				FA45F66C2A5BED0F00B8BBC8 /* NaverBookSearchDTO.swift */,
+				FA45F66D2A5BED0F00B8BBC8 /* LocationManager.swift */,
+				FA45F66E2A5BED0F00B8BBC8 /* NaverBookSearchRouter.swift */,
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		FA45F66F2A5BED0F00B8BBC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F6702A5BED0F00B8BBC8 /* Chat.swift */,
+				FA45F6712A5BED0F00B8BBC8 /* Message.swift */,
+				FA45F6722A5BED0F00B8BBC8 /* User.swift */,
+				FA45F6732A5BED0F00B8BBC8 /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA45F6742A5BED0F00B8BBC8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F6752A5BED0F00B8BBC8 /* Home */,
+				FA45F67C2A5BED0F00B8BBC8 /* Like */,
+				FA45F67E2A5BED0F00B8BBC8 /* Chat */,
+				FA45F6822A5BED0F00B8BBC8 /* Auth */,
+				FA45F68B2A5BED0F00B8BBC8 /* Status */,
+				FA45F68E2A5BED0F00B8BBC8 /* Profile */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA45F6752A5BED0F00B8BBC8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F6762A5BED0F00B8BBC8 /* AddBookDetailView.swift */,
+				FA45F6772A5BED0F00B8BBC8 /* AddBookView.swift */,
+				FA45F6782A5BED0F00B8BBC8 /* BookSearchView.swift */,
+				FA45F6792A5BED0F00B8BBC8 /* BookDetailView.swift */,
+				FA45F67A2A5BED0F00B8BBC8 /* HomeView.swift */,
+				FA45F67B2A5BED0F00B8BBC8 /* HomeNaverMap.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FA45F67C2A5BED0F00B8BBC8 /* Like */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F67D2A5BED0F00B8BBC8 /* LikeView.swift */,
+			);
+			path = Like;
+			sourceTree = "<group>";
+		};
+		FA45F67E2A5BED0F00B8BBC8 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F67F2A5BED0F00B8BBC8 /* SendTextField.swift */,
+				FA45F6802A5BED0F00B8BBC8 /* ChatDetailView.swift */,
+				FA45F6812A5BED0F00B8BBC8 /* ChatView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		FA45F6822A5BED0F00B8BBC8 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F6832A5BED0F00B8BBC8 /* SignUpDetailView.swift */,
+				FA45F6842A5BED0F00B8BBC8 /* MapAuthView.swift */,
+				FA45F6852A5BED0F00B8BBC8 /* SignUpCompleteView.swift */,
+				FA45F6862A5BED0F00B8BBC8 /* AuthView.swift */,
+				FA45F6872A5BED0F00B8BBC8 /* NaverMap.swift */,
+				FA45F6882A5BED0F00B8BBC8 /* SignInView.swift */,
+				FA45F6892A5BED0F00B8BBC8 /* PhoneAuthView.swift */,
+				FA45F68A2A5BED0F00B8BBC8 /* SignUpView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FA45F68B2A5BED0F00B8BBC8 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F68C2A5BED0F00B8BBC8 /* StatusView.swift */,
+				FA45F68D2A5BED0F00B8BBC8 /* WriteReviewView.swift */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		FA45F68E2A5BED0F00B8BBC8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F68F2A5BED0F00B8BBC8 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FA45F6902A5BED0F00B8BBC8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F6912A5BED0F00B8BBC8 /* ReverseGeocodeService.swift */,
+				FA45F6922A5BED0F00B8BBC8 /* NaverBookSearchService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA45F6322A5BECDF00B8BBC8 /* NewModo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA45F6412A5BECDF00B8BBC8 /* Build configuration list for PBXNativeTarget "NewModo" */;
+			buildPhases = (
+				DD25EB0E90B50AD6F0ACA385 /* [CP] Check Pods Manifest.lock */,
+				FA45F62F2A5BECDF00B8BBC8 /* Sources */,
+				FA45F6302A5BECDF00B8BBC8 /* Frameworks */,
+				FA45F6312A5BECDF00B8BBC8 /* Resources */,
+				1ACF9C7E3251E50D88369E5B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NewModo;
+			productName = NewModo;
+			productReference = FA45F6332A5BECDF00B8BBC8 /* NewModo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA45F62B2A5BECDF00B8BBC8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					FA45F6322A5BECDF00B8BBC8 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = FA45F62E2A5BECDF00B8BBC8 /* Build configuration list for PBXProject "NewModo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA45F62A2A5BECDF00B8BBC8;
+			productRefGroup = FA45F6342A5BECDF00B8BBC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA45F6322A5BECDF00B8BBC8 /* NewModo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA45F6312A5BECDF00B8BBC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA45F6D42A5BF37200B8BBC8 /* Secret.xcconfig in Resources */,
+				FA45F6A42A5BED0F00B8BBC8 /* Pretendard-Thin.otf in Resources */,
+				FA45F69E2A5BED0F00B8BBC8 /* Pretendard-Regular.otf in Resources */,
+				FA45F6A62A5BED0F00B8BBC8 /* Pretendard-SemiBold.otf in Resources */,
+				FA45F6A22A5BED0F00B8BBC8 /* Pretendard-ExtraBold.otf in Resources */,
+				FA45F63E2A5BECDF00B8BBC8 /* Preview Assets.xcassets in Resources */,
+				FA45F6A72A5BED0F00B8BBC8 /* Assets.xcassets in Resources */,
+				FA45F6A12A5BED0F00B8BBC8 /* Pretendard-Light.otf in Resources */,
+				FA45F69F2A5BED0F00B8BBC8 /* Pretendard-Black.otf in Resources */,
+				FA45F6A32A5BED0F00B8BBC8 /* Pretendard-Bold.otf in Resources */,
+				FA45F6A02A5BED0F00B8BBC8 /* Pretendard-Medium.otf in Resources */,
+				FA45F6A52A5BED0F00B8BBC8 /* Pretendard-ExtraLight.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1ACF9C7E3251E50D88369E5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewModo/Pods-NewModo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewModo/Pods-NewModo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NewModo/Pods-NewModo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD25EB0E90B50AD6F0ACA385 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NewModo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA45F62F2A5BECDF00B8BBC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA45F6BC2A5BED0F00B8BBC8 /* BookDetailView.swift in Sources */,
+				FA45F6CB2A5BED0F00B8BBC8 /* StatusView.swift in Sources */,
+				FA45F6BA2A5BED0F00B8BBC8 /* AddBookView.swift in Sources */,
+				FA45F6BD2A5BED0F00B8BBC8 /* HomeView.swift in Sources */,
+				FA45F6CF2A5BED0F00B8BBC8 /* NaverBookSearchService.swift in Sources */,
+				FA45F6B22A5BED0F00B8BBC8 /* NaverBookSearchDTO.swift in Sources */,
+				FA45F6C92A5BED0F00B8BBC8 /* PhoneAuthView.swift in Sources */,
+				FA45F6B12A5BED0F00B8BBC8 /* ChatRoomViewModel.swift in Sources */,
+				FA45F6D02A5BED0F00B8BBC8 /* ContentView.swift in Sources */,
+				FA45F6942A5BED0F00B8BBC8 /* PreviewDevice.swift in Sources */,
+				FA45F6372A5BECDF00B8BBC8 /* NewModoApp.swift in Sources */,
+				FA45F6952A5BED0F00B8BBC8 /* Constants.swift in Sources */,
+				FA45F6BF2A5BED0F00B8BBC8 /* LikeView.swift in Sources */,
+				FA45F6BB2A5BED0F00B8BBC8 /* BookSearchView.swift in Sources */,
+				FA45F6C72A5BED0F00B8BBC8 /* NaverMap.swift in Sources */,
+				FA45F6AD2A5BED0F00B8BBC8 /* ReverseGeocodeRouter.swift in Sources */,
+				FA45F6C82A5BED0F00B8BBC8 /* SignInView.swift in Sources */,
+				FA45F6AE2A5BED0F00B8BBC8 /* BookViewModel.swift in Sources */,
+				FA45F69A2A5BED0F00B8BBC8 /* Ex+View.swift in Sources */,
+				FA45F6BE2A5BED0F00B8BBC8 /* HomeNaverMap.swift in Sources */,
+				FA45F6972A5BED0F00B8BBC8 /* Ex+Font.swift in Sources */,
+				FA45F6AC2A5BED0F00B8BBC8 /* NaverBookSearchViewModel.swift in Sources */,
+				FA45F6B02A5BED0F00B8BBC8 /* MessageViewModel.swift in Sources */,
+				FA45F6C02A5BED0F00B8BBC8 /* SendTextField.swift in Sources */,
+				FA45F6B32A5BED0F00B8BBC8 /* LocationManager.swift in Sources */,
+				FA45F6982A5BED0F00B8BBC8 /* Ex+UIDevice.swift in Sources */,
+				FA45F6B92A5BED0F00B8BBC8 /* AddBookDetailView.swift in Sources */,
+				FA45F6992A5BED0F00B8BBC8 /* Ex+Date.swift in Sources */,
+				FA45F6C42A5BED0F00B8BBC8 /* MapAuthView.swift in Sources */,
+				FA45F6AF2A5BED0F00B8BBC8 /* ReverseGeocodeDTO.swift in Sources */,
+				FA45F69C2A5BED0F00B8BBC8 /* Secret.swift in Sources */,
+				FA45F6C32A5BED0F00B8BBC8 /* SignUpDetailView.swift in Sources */,
+				FA45F6B62A5BED0F00B8BBC8 /* Message.swift in Sources */,
+				FA45F6CA2A5BED0F00B8BBC8 /* SignUpView.swift in Sources */,
+				FA45F6CE2A5BED0F00B8BBC8 /* ReverseGeocodeService.swift in Sources */,
+				FA45F6B82A5BED0F00B8BBC8 /* Book.swift in Sources */,
+				FA45F6C62A5BED0F00B8BBC8 /* AuthView.swift in Sources */,
+				FA45F6B52A5BED0F00B8BBC8 /* Chat.swift in Sources */,
+				FA45F6962A5BED0F00B8BBC8 /* BtnModifier.swift in Sources */,
+				FA45F6C12A5BED0F00B8BBC8 /* ChatDetailView.swift in Sources */,
+				FA45F6B72A5BED0F00B8BBC8 /* User.swift in Sources */,
+				FA45F6CC2A5BED0F00B8BBC8 /* WriteReviewView.swift in Sources */,
+				FA45F6CD2A5BED0F00B8BBC8 /* ProfileView.swift in Sources */,
+				FA45F6C52A5BED0F00B8BBC8 /* SignUpCompleteView.swift in Sources */,
+				FA45F6B42A5BED0F00B8BBC8 /* NaverBookSearchRouter.swift in Sources */,
+				FA45F6C22A5BED0F00B8BBC8 /* ChatView.swift in Sources */,
+				FA45F6AB2A5BED0F00B8BBC8 /* SignUpViewModel.swift in Sources */,
+				FA45F6AA2A5BED0F00B8BBC8 /* ReverseGeocodeViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FA45F63F2A5BECDF00B8BBC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 841957BE0ABB88CDE9BF19A9 /* Pods-NewModo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA45F6402A5BECDF00B8BBC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA45F6422A5BECDF00B8BBC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA45F6512A5BED0E00B8BBC8 /* Secret.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NewModo/Preview Content\"";
+				DEVELOPMENT_TEAM = JWN5K8TJ87;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NewModo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heodoo.NewModo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA45F6432A5BECDF00B8BBC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C79D0CE902512FDF2828184D /* Pods-NewModo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NewModo/Preview Content\"";
+				DEVELOPMENT_TEAM = JWN5K8TJ87;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NewModo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heodoo.NewModo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA45F62E2A5BECDF00B8BBC8 /* Build configuration list for PBXProject "NewModo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA45F63F2A5BECDF00B8BBC8 /* Debug */,
+				FA45F6402A5BECDF00B8BBC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA45F6412A5BECDF00B8BBC8 /* Build configuration list for PBXNativeTarget "NewModo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA45F6422A5BECDF00B8BBC8 /* Debug */,
+				FA45F6432A5BECDF00B8BBC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA45F62B2A5BECDF00B8BBC8 /* Project object */;
+}
