@@ -6,36 +6,15 @@
 //
 
 import SwiftUI
-
-private enum FocusableField: Hashable {
-    case id
-    case pw
-    case login
-}
+import _AuthenticationServices_SwiftUI
 
 struct SignInView: View {
-    
+    @EnvironmentObject var authVM : AuthViewModel
     @Binding var authState : AuthState
-    
-    @FocusState private var focus : FocusableField?
-    
     @State private var isLoggedIn : Bool = false
-    @State private var id : String = ""
-    @State private var pw : String = ""
-    @State private var isShowingPw : Bool = false
-    @State private var isSignInButtonDisabled : Bool = true
-    
-    // 연산프로퍼티
-    private var isDisabledLoginBtn: Bool {
-        if pw.count > 8 && pw.count < 20 && id != "" {
-            return true
-        }
-        return false
-    }
     
     var body: some View {
         VStack{
-            
             //로고 이미지
             VStack{
                 Image("logo")
@@ -55,135 +34,89 @@ struct SignInView: View {
             }
             .padding([.top,.bottom],Screen.maxHeight*0.05)
             
-            //아이디 입력
-            Group{
-                HStack{
-                    Text("아이디")
-                        .font(.pretendardHeadline)
-                        .foregroundColor(.secondary)
-                    Spacer()
-                }
-                RoundedRectangle(cornerRadius: 4)
-                    .stroke(lineWidth: 0.2)
-                    .frame(height: Screen.maxHeight*0.05)
-                    .overlay {
-                        TextField("아이디 입력", text: $id)
-                            .focused($focus, equals: .id)
-                            .font(.pretendardCallout)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .keyboardType(.emailAddress)
-                            .textInputAutocapitalization(.never)
-                            .disableAutocorrection(true)
-                            .onSubmit {
-                                self.focus = .pw
-                            }
-                    }
-            }
-            
-            //비밀번호 입력
-            Group{
-                HStack{
-                    Text("비밀번호")
-                        .font(.pretendardHeadline)
-                        .foregroundColor(.secondary)
-                    Spacer()
-                }
-                .padding(.top,20)
-                RoundedRectangle(cornerRadius: 4)
-                    .stroke(lineWidth: 0.2)
-                    .frame(height: Screen.maxHeight*0.05)
-                    .overlay {
-                        if isShowingPw {
-                            TextField("비밀번호 입력", text: $pw)
-                                .focused($focus, equals: .pw)
-                                .font(.pretendardCallout)
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                            
-                                .textInputAutocapitalization(.never)
-                                .disableAutocorrection(true)
-                                .onSubmit {
-                                    // 로그인 함수
-                                    print("로그인 버튼 클릭")
-                                }
-                                .overlay {
-                                    HStack{
-                                        Spacer()
-                                        Button(action: {
-                                            isShowingPw.toggle()
-                                        }) {
-                                            Image(systemName: "eye.slash")
-                                        }
-                                        .foregroundColor(.secondary)
-                                        .padding(.trailing,10)
-                                    }
-                                    
-                                }
-                        }
-                        else{
-                            SecureField("비밀번호 입력", text: $pw)
-                                .focused($focus, equals: .pw)
-                                .font(.pretendardCallout)
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .textInputAutocapitalization(.never)
-                                .disableAutocorrection(true)
-                            
-                                .onSubmit {
-                                    // 로그인 함수
-                                    print("로그인 버튼 클릭")
-                                }
-                                .overlay {
-                                    HStack{
-                                        Spacer()
-                                        Button(action: {
-                                            isShowingPw.toggle()
-                                        }) {
-                                            Image(systemName: "eye")
-                                        }
-                                        .foregroundColor(.secondary)
-                                        .padding(.trailing,10)
-                                    }
-                                    
-                                }
-                        }
-                        
-                    }
-            }
-            Button(action: {
-                //로그인 시도 메소드
-                withAnimation(.easeInOut){
-                    authState = .authenticated
-                }
-            }) {
-                Text("로그인")
-            }
-                .buttonStyle(BasicBrownButton())
-                .padding(.top,20)
-            
             Spacer()
             
-            //회원가입 버튼
-            Group{
-                HStack{
-                    Text("계정이 없으신가요?")
-                    Spacer()
+            VStack(spacing: 18) {
+                //카카오 로그인 버튼
+                Button {
+                    authVM.kakaoLogin()
+                    //kakaoAuthVM.handleKaKaoLogin()
+                } label: {
+                    Image("kakaologin")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 320)
                 }
                 
-                NavigationLink(destination: SignUpView()) {
-                    RoundedRectangle(cornerRadius: 4)
-                        .stroke(Color("Brown0"), lineWidth: 1)
-                        .frame(height: 55)
-                    
-                        .overlay {
-                            Text("회원가입 하기")
-                                .font(.pretendardTitle3)
-                                .foregroundColor(Color("Brown0"))
-                        }
+                //구글 로그인 버튼
+                //GoogleSignInButton(action: googleAuthVM.signIn)
+                Button {
+                    authVM.googleSignIn()
+                } label: {
+                    Image("googlelogin")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 320)
                 }
-                .padding(.bottom,30)
+                
+                //애플 로그인 버튼
+                HStack {
+                    Image(systemName: "applelogo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 25, height: 25)
+
+
+                    Text("Apple Sign in")
+                        .font(.callout)
+                        .lineLimit(1)
+                }
+                .foregroundColor(.white)
+                .padding(.horizontal,15)
+                .frame(width: 320, height: 50, alignment: .center)
+                .background {
+                    RoundedRectangle(cornerRadius: 8, style: .continuous)
+                        .fill(.black)
+                }
+                .overlay {
+                    SignInWithAppleButton { request in
+                        authVM.nonce = randomNonceString()
+                        request.requestedScopes = [.fullName, .email]
+                        request.nonce = sha256(authVM.nonce)
+
+                    } onCompletion: { (result) in
+                        switch result {
+                        case .success(let user):
+                            print("success")
+                            guard let credential = user.credential as?
+                                    ASAuthorizationAppleIDCredential else {
+                                print("error with firebase")
+                                return
+                            }
+                            Task { await authVM.appleAuthenticate(credential: credential) }
+                        case.failure(let error):
+                            print(error.localizedDescription)
+                        }
+                    }
+                    .signInWithAppleButtonStyle(.white)
+                    .cornerRadius(8)
+                    .frame(height: 45)
+                    .blendMode(.overlay)
+                }
+                .clipped()
+//                AppleSigninButton()
+                
+                Button {
+                    authState = .authenticated
+                    authVM.loginState = .pass
+                } label: {
+                    Text("로그인 건너뛰기")
+                        .foregroundColor(.secondary)
+                        .font(.pretendardHeadline)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }
             }
+            
         }
         .padding(30)
         .frame(maxWidth: .infinity, maxHeight: .infinity) // <-
@@ -192,6 +125,39 @@ struct SignInView: View {
             }
         
         
+    }
+}
+
+struct AppleSigninButton : View{
+    var body: some View{
+        SignInWithAppleButton(
+            onRequest: { request in
+                request.requestedScopes = [.fullName, .email]
+            },
+            onCompletion: { result in
+                switch result {
+                case .success(let authResults):
+                    print("Apple Login Successful")
+                    switch authResults.credential{
+                        case let appleIDCredential as ASAuthorizationAppleIDCredential:
+                           // 계정 정보 가져오기
+                            let UserIdentifier = appleIDCredential.user
+                            let fullName = appleIDCredential.fullName
+                            let name =  (fullName?.familyName ?? "") + (fullName?.givenName ?? "")
+                            let email = appleIDCredential.email
+                            let IdentityToken = String(data: appleIDCredential.identityToken!, encoding: .utf8)
+                            let AuthorizationCode = String(data: appleIDCredential.authorizationCode!, encoding: .utf8)
+                    default:
+                        break
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    print("error")
+                }
+            }
+        )
+        .frame(width : UIScreen.main.bounds.width * 0.9, height:50)
+        .cornerRadius(5)
     }
 }
 
