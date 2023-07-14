@@ -8,8 +8,12 @@ target 'NewModo' do
   # Pods for NewModo
   pod 'NMapsMap'
   pod 'Alamofire'
-
-  # temporary fix for this issue to suppress a ton of warnings
+  pod 'GoogleSignIn'
+  pod 'KakaoSDKCommon'  # 필수 요소를 담은 공통 모듈
+  pod 'KakaoSDKAuth'  # 사용자 인증
+  pod 'KakaoSDKUser'  # 카카오 로그인, 사용자 관리
+  
+# temporary fix for this issue to suppress a ton of warnings
   # https://github.com/CocoaPods/CocoaPods/issues/7314
   post_install do |pi|
       pi.pods_project.targets.each do |t|
