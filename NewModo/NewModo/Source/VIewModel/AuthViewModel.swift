@@ -18,6 +18,7 @@ import AuthenticationServices
 import GoogleSignIn
 import KakaoSDKAuth
 import KakaoSDKUser
+import Alamofire
 
 enum LoginState {
     case authenticated
@@ -45,19 +46,6 @@ class AuthViewModel : ObservableObject {
     @Published var nonce: String = ""
     
     
-    
-    func signout(){
-        do{
-            //task: signout action
-            withAnimation(.easeInOut){self.loginState = .unauthenticated}
-            self.currentUserProfile = nil
-            
-        }catch{
-            print("실패")
-        }
-        
-    }
-    
     // MARK: Handling Error
     func handleError(error: Error) async {
         
@@ -82,33 +70,25 @@ class AuthViewModel : ObservableObject {
         }
         print("tokenString : \(tokenString)")
         print("애플로그인 성공")
+        
+        // 백엔드 서버에 애플 idtoken 인증요청
+        let url = "https://modolib.com/oauth/apple/app?idToken=\(tokenString)"
+        
+        AF.request(url, method: .post, encoding: JSONEncoding.default)
+            .responseDecodable(of: UserToken.self) { response in
+                switch response.result {
+                        case .success(let userToken):
+                            // 디코딩 성공: userToken 객체에 디코딩된 데이터가 저장됩니다.
+                            print("User Token: \(userToken)")
+                        case .failure(let error):
+                            // 디코딩 에러 또는 네트워크 에러 처리
+                            print("Error: \(error)")
+                        }
+            }
+        
         loginState = .authenticated
         
     }
-    
-    // MARK: Logging Google User into Firebase
-    func googleSignIn() {
-        // 한번 로그인한 적이 있음(previous Sign-In ?)
-                if GIDSignIn.sharedInstance.hasPreviousSignIn() {
-                    // 있으면 복원 (yes then restore)
-                    GIDSignIn.sharedInstance.restorePreviousSignIn { [unowned self] user, error in
-                        authenticateUser(for: user, with: error)
-                        
-                    }
-                } else {// 처음 로그인
-                    
-                    guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
-                    guard let rootViewController = windowScene.windows.first?.rootViewController else { return }
-                    
-                    GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController) { [unowned self] result, error in
-                        guard let user = result?.user else { return }
-                        authenticateUser(for: user, with: error)
-                        
-                    }
-                    
-                }
-    }
-    
     
     // MARK: - [카카오 Auth]
     func kakaoLogout() async {
@@ -180,26 +160,49 @@ class AuthViewModel : ObservableObject {
         })
     }
     
-    private func authenticateUser(for user: GIDGoogleUser?, with error: Error?) {
-            // 1
-            if let error = error {
-                print(error.localizedDescription)
-                return
+    // MARK: Logging Google User
+    func googleSignIn() {
+        // 한번 로그인한 적이 있음(previous Sign-In ?)
+        if GIDSignIn.sharedInstance.hasPreviousSignIn() {
+            // 있으면 복원 (yes then restore)
+            GIDSignIn.sharedInstance.restorePreviousSignIn { [unowned self] user, error in
+                authenticateUser(for: user, with: error)
+                
+            }
+        } else {// 처음 로그인
+            
+            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
+            guard let rootViewController = windowScene.windows.first?.rootViewController else { return }
+            
+            GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController) { [unowned self] result, error in
+                guard let user = result?.user else { return }
+                authenticateUser(for: user, with: error)
+                
             }
             
-            // 2 user 인스턴스에서 idToken 과 accessToken을 받아온다
-            // 인증
-            /* 원래
-             guard let authentication = user?.authentication, let idToken = authentication.idToken else { return }
-             
-             let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
-             */
-            
-            guard let accessToken = user?.accessToken, let idToken = user?.idToken else {return }
-            
-            //let credential = GoogleAuthProvider.credential(withIDToken: idToken.tokenString, accessToken: accessToken.tokenString)
-            
         }
+    }
+    
+    private func authenticateUser(for user: GIDGoogleUser?, with error: Error?) {
+        // 1
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        
+        // 2 user 인스턴스에서 idToken 과 accessToken을 받아온다
+        // 인증
+        /* 원래
+         guard let authentication = user?.authentication, let idToken = authentication.idToken else { return }
+         
+         let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
+         */
+        
+        guard let accessToken = user?.accessToken, let idToken = user?.idToken else {return }
+        
+        //let credential = GoogleAuthProvider.credential(withIDToken: idToken.tokenString, accessToken: accessToken.tokenString)
+        
+    }
     
     //회원탈퇴
     func deleteAuth() {

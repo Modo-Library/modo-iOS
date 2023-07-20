@@ -69,6 +69,7 @@
 		FA45F6D02A5BED0F00B8BBC8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6932A5BED0F00B8BBC8 /* ContentView.swift */; };
 		FA45F6D42A5BF37200B8BBC8 /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FA45F6512A5BED0E00B8BBC8 /* Secret.xcconfig */; };
 		FA45F6D82A5BFD9800B8BBC8 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6D72A5BFD9800B8BBC8 /* AuthViewModel.swift */; };
+		FA45F6DE2A691BE900B8BBC8 /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6DD2A691BE900B8BBC8 /* UserToken.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +140,7 @@
 		FA45F6D62A5BF4FC00B8BBC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FA45F6D72A5BFD9800B8BBC8 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		FA45F6DC2A6119E400B8BBC8 /* NewModo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NewModo.entitlements; sourceTree = "<group>"; };
+		FA45F6DD2A691BE900B8BBC8 /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +331,7 @@
 				FA45F6712A5BED0F00B8BBC8 /* Message.swift */,
 				FA45F6722A5BED0F00B8BBC8 /* User.swift */,
 				FA45F6732A5BED0F00B8BBC8 /* Book.swift */,
+				FA45F6DD2A691BE900B8BBC8 /* UserToken.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				FA45F6962A5BED0F00B8BBC8 /* BtnModifier.swift in Sources */,
 				FA45F6C12A5BED0F00B8BBC8 /* ChatDetailView.swift in Sources */,
 				FA45F6B72A5BED0F00B8BBC8 /* User.swift in Sources */,
+				FA45F6DE2A691BE900B8BBC8 /* UserToken.swift in Sources */,
 				FA45F6CC2A5BED0F00B8BBC8 /* WriteReviewView.swift in Sources */,
 				FA45F6CD2A5BED0F00B8BBC8 /* ProfileView.swift in Sources */,
 				FA45F6C52A5BED0F00B8BBC8 /* SignUpCompleteView.swift in Sources */,
