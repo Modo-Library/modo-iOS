@@ -27,6 +27,12 @@ enum LoginState {
     case pass
 }
 
+struct ErrorResponse : Codable {
+    let message: String
+    let errorCode : Int
+    let name: String
+}
+
 @MainActor
 class AuthViewModel : ObservableObject {
     @Published var loginState : LoginState? = nil
@@ -68,6 +74,12 @@ class AuthViewModel : ObservableObject {
             print("error with Token")
             return
         }
+        
+        if let fullName = credential.fullName, let email = credential.email {
+            print("fullName: \(fullName)")
+            print("email: \(email)")
+        }
+        
         print("tokenString : \(tokenString)")
         print("애플로그인 성공")
         
@@ -77,13 +89,22 @@ class AuthViewModel : ObservableObject {
         AF.request(url, method: .post, encoding: JSONEncoding.default)
             .responseDecodable(of: UserToken.self) { response in
                 switch response.result {
-                        case .success(let userToken):
-                            // 디코딩 성공: userToken 객체에 디코딩된 데이터가 저장됩니다.
-                            print("User Token: \(userToken)")
-                        case .failure(let error):
-                            // 디코딩 에러 또는 네트워크 에러 처리
-                            print("Error: \(error)")
-                        }
+                case .success(let userToken):
+                    // 디코딩 성공: userToken 객체에 디코딩된 데이터가 저장됩니다.
+                    print("User Token: \(userToken)")
+                case .failure(let error):
+                    // 디코딩 에러 또는 네트워크 에러 처리
+                    if let responseData = response.data,
+                       let errorResponse = try? JSONDecoder().decode(ErrorResponse.self, from: responseData) {
+                        // 에러 데이터를 디코딩하여 사용할 수 있는 형태로 파싱합니다.
+                        print("Error Message: \(errorResponse.message)")
+                        print("Error Code: \(errorResponse.errorCode)")
+                        print("Error Name: \(errorResponse.name)")
+                    } else {
+                        // 에러 데이터 디코딩 실패 또는 다른 네트워크 에러 처리
+                        print("Error: \(error)")
+                    }
+                }
             }
         
         loginState = .authenticated
@@ -109,12 +130,29 @@ class AuthViewModel : ObservableObject {
             }
             else {
                 print("loginWithKakaoTalk() success.")
-                //do something
-                self.loginState = .authenticated
                 //_ = oauthToken
                 if let oauthToken = oauthToken {
                     print("DEBUG: 카카오톡 \(oauthToken)")
                 }
+                guard let accessToken = oauthToken?.accessToken else{
+                    return
+                }
+                let url = "https://modolib.com/oauth/kakao/app?token=\(accessToken)"
+                AF.request(url, method: .post, encoding: JSONEncoding.default)
+                    .responseDecodable(of: UserToken.self) { response in
+                        switch response.result {
+                        case .success(let userToken):
+                            // 디코딩 성공: userToken 객체에 디코딩된 데이터가 저장됩니다.
+                            print("User Token: \(userToken)")
+                        case .failure(let error):
+                            // 디코딩 에러 또는 네트워크 에러 처리
+                            print("Error: \(error)")
+                        }
+                    }
+                
+                //do something
+                self.loginState = .authenticated
+                
             }
         }
     }
@@ -126,10 +164,35 @@ class AuthViewModel : ObservableObject {
                 print(error)
             }
             else {
-                print("웹 로그인 성공")
-                if let token {
-                    print("\(token)")
+                print("카카오 웹 로그인 성공")
+                guard let accessToken = token?.accessToken else{
+                    return
                 }
+                let url = "https://modolib.com/oauth/kakao/app?token=\(accessToken)"
+                AF.request(url, method: .post, encoding: JSONEncoding.default)
+                    .responseDecodable(of: UserToken.self) { response in
+                        switch response.result {
+                        case .success(let userToken):
+                            // 디코딩 성공: userToken 객체에 디코딩된 데이터가 저장됩니다.
+                            print("User Token: \(userToken)")
+                        case .failure(let error):
+                            // 디코딩 에러 또는 네트워크 에러 처리
+                            if let responseData = response.data,
+                               let errorResponse = try? JSONDecoder().decode(ErrorResponse.self, from: responseData) {
+                                // 에러 데이터를 디코딩하여 사용할 수 있는 형태로 파싱합니다.
+                                print("Error Message: \(errorResponse.message)")
+                                print("Error Code: \(errorResponse.errorCode)")
+                                print("Error Name: \(errorResponse.name)")
+                            } else {
+                                // 에러 데이터 디코딩 실패 또는 다른 네트워크 에러 처리
+                                print("Error: \(error)")
+                            }
+                        }
+                    }
+                
+                //do something
+                self.loginState = .authenticated
+                
             }
         }
     }
