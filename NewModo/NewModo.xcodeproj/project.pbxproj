@@ -70,6 +70,7 @@
 		FA45F6D42A5BF37200B8BBC8 /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FA45F6512A5BED0E00B8BBC8 /* Secret.xcconfig */; };
 		FA45F6D82A5BFD9800B8BBC8 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6D72A5BFD9800B8BBC8 /* AuthViewModel.swift */; };
 		FA45F6DE2A691BE900B8BBC8 /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6DD2A691BE900B8BBC8 /* UserToken.swift */; };
+		FA45F6E02A6E94F800B8BBC8 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6DF2A6E94F700B8BBC8 /* KeychainManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +142,7 @@
 		FA45F6D72A5BFD9800B8BBC8 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		FA45F6DC2A6119E400B8BBC8 /* NewModo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NewModo.entitlements; sourceTree = "<group>"; };
 		FA45F6DD2A691BE900B8BBC8 /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
+		FA45F6DF2A6E94F700B8BBC8 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +322,7 @@
 				FA45F66D2A5BED0F00B8BBC8 /* LocationManager.swift */,
 				FA45F66E2A5BED0F00B8BBC8 /* NaverBookSearchRouter.swift */,
 				FA45F6D72A5BFD9800B8BBC8 /* AuthViewModel.swift */,
+				FA45F6DF2A6E94F700B8BBC8 /* KeychainManager.swift */,
 			);
 			path = VIewModel;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				FA45F6CF2A5BED0F00B8BBC8 /* NaverBookSearchService.swift in Sources */,
 				FA45F6B22A5BED0F00B8BBC8 /* NaverBookSearchDTO.swift in Sources */,
 				FA45F6C92A5BED0F00B8BBC8 /* PhoneAuthView.swift in Sources */,
+				FA45F6E02A6E94F800B8BBC8 /* KeychainManager.swift in Sources */,
 				FA45F6B12A5BED0F00B8BBC8 /* ChatRoomViewModel.swift in Sources */,
 				FA45F6D02A5BED0F00B8BBC8 /* ContentView.swift in Sources */,
 				FA45F6942A5BED0F00B8BBC8 /* PreviewDevice.swift in Sources */,
