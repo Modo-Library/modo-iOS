@@ -21,7 +21,9 @@ struct ContentView: View {
                             .foregroundColor(Color("Brown1"))
                             .padding()
                     }
-                StatusView()
+                
+                //Test 수정필요
+                UploadImgeTestView()//StatusView()
                     .padding(.bottom,5)
                     .tag(1)
                     .tabItem {

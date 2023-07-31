@@ -92,6 +92,9 @@ class AuthViewModel : ObservableObject {
                 case .success(let userToken):
                     // 디코딩 성공: userToken 객체에 디코딩된 데이터가 저장됩니다.
                     print("User Token: \(userToken)")
+                    
+                    // UserDefaults에 토큰 저장
+                    UserViewModel.shared.saveTokenToUserDefaults(userToken)
                 case .failure(let error):
                     // 디코딩 에러 또는 네트워크 에러 처리
                     if let responseData = response.data,
@@ -144,6 +147,9 @@ class AuthViewModel : ObservableObject {
                         case .success(let userToken):
                             // 디코딩 성공: userToken 객체에 디코딩된 데이터가 저장됩니다.
                             print("User Token: \(userToken)")
+                            
+                            // UserDefaults에 토큰 저장
+                            UserViewModel.shared.saveTokenToUserDefaults(userToken)
                         case .failure(let error):
                             // 디코딩 에러 또는 네트워크 에러 처리
                             print("Error: \(error)")
@@ -175,6 +181,9 @@ class AuthViewModel : ObservableObject {
                         case .success(let userToken):
                             // 디코딩 성공: userToken 객체에 디코딩된 데이터가 저장됩니다.
                             print("User Token: \(userToken)")
+                            
+                            // UserDefaults에 토큰 저장
+                            UserViewModel.shared.saveTokenToUserDefaults(userToken)
                         case .failure(let error):
                             // 디코딩 에러 또는 네트워크 에러 처리
                             if let responseData = response.data,
