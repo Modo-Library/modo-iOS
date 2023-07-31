@@ -71,6 +71,10 @@
 		FA45F6D82A5BFD9800B8BBC8 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6D72A5BFD9800B8BBC8 /* AuthViewModel.swift */; };
 		FA45F6DE2A691BE900B8BBC8 /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6DD2A691BE900B8BBC8 /* UserToken.swift */; };
 		FA45F6E02A6E94F800B8BBC8 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F6DF2A6E94F700B8BBC8 /* KeychainManager.swift */; };
+		FA45F70B2A73A94300B8BBC8 /* S3ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F70A2A73A94300B8BBC8 /* S3ImageViewModel.swift */; };
+		FA45F70D2A73B9C100B8BBC8 /* UploadImgeTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F70C2A73B9C100B8BBC8 /* UploadImgeTestView.swift */; };
+		FA45F70F2A779A7800B8BBC8 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F70E2A779A7800B8BBC8 /* UserViewModel.swift */; };
+		FA45F7112A77A39600B8BBC8 /* UserResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F7102A77A39600B8BBC8 /* UserResponseDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +147,10 @@
 		FA45F6DC2A6119E400B8BBC8 /* NewModo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NewModo.entitlements; sourceTree = "<group>"; };
 		FA45F6DD2A691BE900B8BBC8 /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
 		FA45F6DF2A6E94F700B8BBC8 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		FA45F70A2A73A94300B8BBC8 /* S3ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3ImageViewModel.swift; sourceTree = "<group>"; };
+		FA45F70C2A73B9C100B8BBC8 /* UploadImgeTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImgeTestView.swift; sourceTree = "<group>"; };
+		FA45F70E2A779A7800B8BBC8 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		FA45F7102A77A39600B8BBC8 /* UserResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +318,7 @@
 		FA45F6632A5BED0F00B8BBC8 /* VIewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FA45F7092A73A90200B8BBC8 /* Test */,
 				FA45F6642A5BED0F00B8BBC8 /* ReverseGeocodeViewModel.swift */,
 				FA45F6652A5BED0F00B8BBC8 /* SignUpViewModel.swift */,
 				FA45F6662A5BED0F00B8BBC8 /* NaverBookSearchViewModel.swift */,
@@ -322,6 +331,7 @@
 				FA45F66D2A5BED0F00B8BBC8 /* LocationManager.swift */,
 				FA45F66E2A5BED0F00B8BBC8 /* NaverBookSearchRouter.swift */,
 				FA45F6D72A5BFD9800B8BBC8 /* AuthViewModel.swift */,
+				FA45F70E2A779A7800B8BBC8 /* UserViewModel.swift */,
 				FA45F6DF2A6E94F700B8BBC8 /* KeychainManager.swift */,
 			);
 			path = VIewModel;
@@ -335,6 +345,7 @@
 				FA45F6722A5BED0F00B8BBC8 /* User.swift */,
 				FA45F6732A5BED0F00B8BBC8 /* Book.swift */,
 				FA45F6DD2A691BE900B8BBC8 /* UserToken.swift */,
+				FA45F7102A77A39600B8BBC8 /* UserResponseDTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,6 +353,7 @@
 		FA45F6742A5BED0F00B8BBC8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA45F7082A73A8F500B8BBC8 /* Test */,
 				FA45F6752A5BED0F00B8BBC8 /* Home */,
 				FA45F67C2A5BED0F00B8BBC8 /* Like */,
 				FA45F67E2A5BED0F00B8BBC8 /* Chat */,
@@ -422,6 +434,22 @@
 				FA45F6922A5BED0F00B8BBC8 /* NaverBookSearchService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		FA45F7082A73A8F500B8BBC8 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F70C2A73B9C100B8BBC8 /* UploadImgeTestView.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		FA45F7092A73A90200B8BBC8 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				FA45F70A2A73A94300B8BBC8 /* S3ImageViewModel.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -573,10 +601,12 @@
 				FA45F6AC2A5BED0F00B8BBC8 /* NaverBookSearchViewModel.swift in Sources */,
 				FA45F6B02A5BED0F00B8BBC8 /* MessageViewModel.swift in Sources */,
 				FA45F6C02A5BED0F00B8BBC8 /* SendTextField.swift in Sources */,
+				FA45F70F2A779A7800B8BBC8 /* UserViewModel.swift in Sources */,
 				FA45F6D82A5BFD9800B8BBC8 /* AuthViewModel.swift in Sources */,
 				FA45F6B32A5BED0F00B8BBC8 /* LocationManager.swift in Sources */,
 				FA45F6982A5BED0F00B8BBC8 /* Ex+UIDevice.swift in Sources */,
 				FA45F6B92A5BED0F00B8BBC8 /* AddBookDetailView.swift in Sources */,
+				FA45F70D2A73B9C100B8BBC8 /* UploadImgeTestView.swift in Sources */,
 				FA45F6992A5BED0F00B8BBC8 /* Ex+Date.swift in Sources */,
 				FA45F6C42A5BED0F00B8BBC8 /* MapAuthView.swift in Sources */,
 				FA45F6AF2A5BED0F00B8BBC8 /* ReverseGeocodeDTO.swift in Sources */,
@@ -586,6 +616,8 @@
 				FA45F6CA2A5BED0F00B8BBC8 /* SignUpView.swift in Sources */,
 				FA45F6CE2A5BED0F00B8BBC8 /* ReverseGeocodeService.swift in Sources */,
 				FA45F6B82A5BED0F00B8BBC8 /* Book.swift in Sources */,
+				FA45F7112A77A39600B8BBC8 /* UserResponseDTO.swift in Sources */,
+				FA45F70B2A73A94300B8BBC8 /* S3ImageViewModel.swift in Sources */,
 				FA45F6C62A5BED0F00B8BBC8 /* AuthView.swift in Sources */,
 				FA45F6B52A5BED0F00B8BBC8 /* Chat.swift in Sources */,
 				FA45F6962A5BED0F00B8BBC8 /* BtnModifier.swift in Sources */,
