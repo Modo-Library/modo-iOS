@@ -12,7 +12,8 @@ struct ContentView: View {
     var body: some View {
         NavigationStack{
             TabView(selection: $tabSelection) {
-                HomeView()
+                TestMainView()
+                //HomeView()
                     .padding(.bottom,5)
                     .tag(0)
                     .tabItem {

@@ -75,6 +75,7 @@
 		FA45F70D2A73B9C100B8BBC8 /* UploadImgeTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F70C2A73B9C100B8BBC8 /* UploadImgeTestView.swift */; };
 		FA45F70F2A779A7800B8BBC8 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F70E2A779A7800B8BBC8 /* UserViewModel.swift */; };
 		FA45F7112A77A39600B8BBC8 /* UserResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F7102A77A39600B8BBC8 /* UserResponseDTO.swift */; };
+		FA45F7132A81045B00B8BBC8 /* TestMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45F7122A81045B00B8BBC8 /* TestMainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,6 +152,7 @@
 		FA45F70C2A73B9C100B8BBC8 /* UploadImgeTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImgeTestView.swift; sourceTree = "<group>"; };
 		FA45F70E2A779A7800B8BBC8 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		FA45F7102A77A39600B8BBC8 /* UserResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDTO.swift; sourceTree = "<group>"; };
+		FA45F7122A81045B00B8BBC8 /* TestMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				FA45F70C2A73B9C100B8BBC8 /* UploadImgeTestView.swift */,
+				FA45F7122A81045B00B8BBC8 /* TestMainView.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				FA45F6BA2A5BED0F00B8BBC8 /* AddBookView.swift in Sources */,
 				FA45F6BD2A5BED0F00B8BBC8 /* HomeView.swift in Sources */,
 				FA45F6CF2A5BED0F00B8BBC8 /* NaverBookSearchService.swift in Sources */,
+				FA45F7132A81045B00B8BBC8 /* TestMainView.swift in Sources */,
 				FA45F6B22A5BED0F00B8BBC8 /* NaverBookSearchDTO.swift in Sources */,
 				FA45F6C92A5BED0F00B8BBC8 /* PhoneAuthView.swift in Sources */,
 				FA45F6E02A6E94F800B8BBC8 /* KeychainManager.swift in Sources */,
